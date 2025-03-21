@@ -6,10 +6,10 @@ export default class BcryptPassword {
   }
 
   async hashPassword(password) {
-    return this.hash.hash(password, 24);
+    return await this.hash.hash(password, 12);
   }
 
   async comparePasswords(password, hashed) {
-    return this.hash.compare(password, hashed);
+    return await this.hash.compare(password, hashed);
   }
 }
