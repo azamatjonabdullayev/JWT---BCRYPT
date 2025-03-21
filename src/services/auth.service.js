@@ -28,7 +28,7 @@ export default class AuthService {
 
     const token = { id: user.rows[0].id, username: user.rows[0].username };
 
-    return this.jwt.generateToken(token);
+    return { token: this.jwt.generateToken(token) };
   }
 
   async register(username, password, fullname) {

@@ -12,7 +12,7 @@ export default class AuthController {
         res.status(400).send("All fields are required");
       } else {
         const token = await this.auth_service.login(username, password);
-        res.status(200).send(token);
+        res.status(200).json(token);
       }
     } catch (error) {
       res

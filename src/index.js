@@ -6,6 +6,9 @@ const server = express();
 
 server.use(express.json());
 server.use("/auth", allRoutes());
+server.use("*", (req, res) => {
+  res.status(404).send("Page not found");
+});
 
 const PORT = process.env.PORT || 4000;
 
