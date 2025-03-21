@@ -32,10 +32,6 @@ export default class AuthService {
   }
 
   async register(username, password, fullname) {
-    if (!username || !password || !fullname) {
-      throw { status_code: 400, message: "All fields are required" };
-    }
-
     const user = await pool.query("SELECT * FROM users WHERE username = $1", [
       username,
     ]);
