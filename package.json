@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "pm2 start ./src/index.js"
+    "start": "pm2 start ./src/index.js --watch --name lesson2",
+    "del": "pm2 delete all"
   },
   "main": "index.js",
   "license": "MIT",

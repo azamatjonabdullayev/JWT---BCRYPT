@@ -5,7 +5,7 @@ import allRoutes from "./routes/all.routes.js";
 const server = express();
 
 server.use(express.json());
-server.use("/api", allRoutes());
+server.use("/auth", allRoutes());
 
 const PORT = process.env.PORT || 4000;
 
